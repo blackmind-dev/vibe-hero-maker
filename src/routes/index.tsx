@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { FeaturedProjects } from "@/components/FeaturedProjects";
 import { Hero } from "@/components/Hero";
+import { Process } from "@/components/Process";
 import { Services } from "@/components/Services";
 
 export const Route = createFileRoute("/")({
