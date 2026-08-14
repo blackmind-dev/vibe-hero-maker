@@ -36,7 +36,7 @@ export function Hero() {
           <span className="flex size-9 items-center justify-center rounded-xl bg-primary text-primary-foreground">
             <Terminal className="size-4" />
           </span>
-          <span className="font-display text-lg font-semibold tracking-tight">chernukha.dev</span>
+          <span className="font-display text-lg font-semibold tracking-tight">black_mind</span>
         </div>
         <nav className="hidden items-center gap-8 text-sm text-muted-foreground md:flex">
           <a href="#works" className="transition-colors hover:text-foreground">Работы</a>
@@ -98,9 +98,6 @@ export function Hero() {
               <p className="font-display text-sm font-medium">Аналитика проектов</p>
               <p className="text-xs text-muted-foreground">Обновлено 2 минуты назад</p>
             </div>
-            <span className="flex shrink-0 items-center gap-2 rounded-full bg-secondary px-2.5 py-1 text-[11px] text-primary sm:px-3 sm:text-xs">
-              <span className="size-1.5 rounded-full bg-primary" /> Свободен с сентября
-            </span>
           </div>
 
           <div className="mt-5 grid grid-cols-2 gap-3 sm:mt-6 sm:grid-cols-3">
