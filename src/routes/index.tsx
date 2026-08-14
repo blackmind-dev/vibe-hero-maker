@@ -34,6 +34,7 @@ function Index() {
       <FeaturedProjects />
       <Services />
       <Process />
+      <CTA />
     </main>
   );
 }
