@@ -8,6 +8,19 @@ const stats = [
 
 const stack = ["React", "TanStack", "Supabase", "AI Agents", "Tailwind"];
 
+const metrics = [
+  { label: "Активные спринты", value: "03", delta: "+1 за неделю" },
+  { label: "Задач закрыто", value: "128", delta: "+18%" },
+  { label: "Скорость релизов", value: "2.4д", delta: "−0.6д" },
+];
+
+const channels = [
+  { label: "Продуктовые MVP", value: 82 },
+  { label: "AI-интеграции", value: 64 },
+  { label: "Дизайн-системы", value: 45 },
+];
+
+
 export function Hero() {
   return (
     <section className="relative min-h-screen overflow-hidden bg-background">
@@ -79,35 +92,53 @@ export function Hero() {
           </dl>
         </div>
 
-        <div className="panel p-5" id="stack">
-          <div className="flex items-center justify-between">
-            <div>
-              <p className="font-display text-sm font-medium">Текущая загрузка</p>
+        <div className="panel p-4 sm:p-5" id="stack">
+          <div className="grid grid-cols-[minmax(0,1fr)_auto] items-start gap-3 sm:flex sm:items-center sm:justify-between">
+            <div className="min-w-0">
+              <p className="font-display text-sm font-medium">Аналитика проектов</p>
               <p className="text-xs text-muted-foreground">Обновлено 2 минуты назад</p>
             </div>
-            <span className="flex items-center gap-2 rounded-full bg-secondary px-3 py-1 text-xs text-primary">
+            <span className="flex shrink-0 items-center gap-2 rounded-full bg-secondary px-2.5 py-1 text-[11px] text-primary sm:px-3 sm:text-xs">
               <span className="size-1.5 rounded-full bg-primary" /> Свободен с сентября
             </span>
           </div>
 
-          <div className="mt-6 rounded-xl bg-surface-2 p-5">
-            <p className="text-xs text-muted-foreground">Активных спринтов</p>
-            <p className="font-display mt-1 text-4xl font-semibold tracking-tight">03</p>
-            <div className="mt-6 flex h-32 items-end gap-2">
-              {[38, 52, 46, 68, 60, 84, 72, 96].map((h, i) => (
-                <div
-                  key={i}
-                  className="flex-1 rounded-t-md bg-primary/25"
-                  style={{ height: `${h}%`, boxShadow: "inset 0 2px 0 0 var(--mint)" }}
-                />
-              ))}
+          <div className="mt-5 grid grid-cols-2 gap-3 sm:mt-6 sm:grid-cols-3">
+            {metrics.map((m) => (
+              <div key={m.label} className="rounded-xl bg-surface-2 p-3 sm:p-4">
+                <p className="truncate text-[11px] text-muted-foreground">{m.label}</p>
+                <p className="font-display mt-1 text-xl font-semibold tracking-tight sm:text-2xl">
+                  {m.value}
+                </p>
+                <p className="mt-0.5 text-[11px] text-primary">{m.delta}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-4 rounded-xl bg-surface-2 p-4 sm:p-5">
+            <div className="flex items-center justify-between">
+              <p className="text-xs text-muted-foreground">Загрузка по направлениям</p>
+              <p className="text-[11px] text-muted-foreground">30 дней</p>
             </div>
-            <div className="mt-3 flex justify-between text-[11px] text-muted-foreground">
-              <span>Пн</span><span>Ср</span><span>Пт</span><span>Сейчас</span>
+            <div className="mt-4 space-y-3">
+              {channels.map((c) => (
+                <div key={c.label}>
+                  <div className="flex items-center justify-between gap-3 text-xs">
+                    <span className="min-w-0 truncate text-muted-foreground">{c.label}</span>
+                    <span className="shrink-0 font-medium text-foreground">{c.value}%</span>
+                  </div>
+                  <div className="mt-1.5 h-1.5 w-full overflow-hidden rounded-full bg-border">
+                    <div
+                      className="h-full rounded-full"
+                      style={{ width: `${c.value}%`, background: "var(--gradient-mint)" }}
+                    />
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
 
-          <div className="mt-5 flex flex-wrap gap-2">
+          <div className="mt-4 flex flex-wrap gap-2 sm:mt-5">
             {stack.map((t) => (
               <span
                 key={t}
@@ -118,6 +149,7 @@ export function Hero() {
             ))}
           </div>
         </div>
+
       </div>
     </section>
   );
