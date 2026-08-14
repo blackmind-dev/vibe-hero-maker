@@ -37,7 +37,7 @@ const services = [
 
 export function Services() {
   return (
-    <section id="services" className="relative bg-background py-24 sm:py-32">
+    <section id="services" className="section-blend relative bg-background py-24 sm:py-32">
       <div className="grid-bg absolute inset-0 opacity-40" aria-hidden />
 
       <div className="relative mx-auto max-w-6xl px-6">

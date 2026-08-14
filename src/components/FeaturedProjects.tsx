@@ -32,7 +32,7 @@ const projects = [
 
 export function FeaturedProjects() {
   return (
-    <section id="works" className="relative bg-background py-24 sm:py-32">
+    <section id="works" className="section-blend relative bg-background py-24 sm:py-32">
       <div className="grid-bg absolute inset-0 opacity-40" aria-hidden />
 
       <div className="relative mx-auto max-w-6xl px-6">
@@ -58,13 +58,13 @@ export function FeaturedProjects() {
                 className="panel group flex flex-col overflow-hidden transition-all duration-300 hover:border-primary/30 hover:bg-surface-2/60"
               >
                 <div
-                  className="relative h-40 w-full overflow-hidden border-b border-border"
+                  className="relative h-48 w-full overflow-hidden border-b border-border"
                   style={{ background: project.previewGradient }}
                 >
                   <div className="absolute inset-0 grid-bg opacity-30" aria-hidden />
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="flex size-16 items-center justify-center rounded-2xl border border-border bg-surface-2/80 shadow-lg backdrop-blur-sm transition-transform duration-300 group-hover:scale-110">
-                      <Icon className="size-7 text-primary" />
+                    <div className="flex size-24 items-center justify-center rounded-2xl border border-border bg-surface-2/80 shadow-lg backdrop-blur-sm transition-transform duration-300 group-hover:scale-110">
+                      <Icon className="size-11 text-primary" />
                     </div>
                   </div>
                 </div>

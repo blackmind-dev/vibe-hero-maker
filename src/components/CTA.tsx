@@ -2,7 +2,7 @@ import { Mail, Send } from "lucide-react";
 
 export function CTA() {
   return (
-    <section id="contact" className="relative bg-background py-24 sm:py-32">
+    <section id="contact" className="section-blend relative bg-background py-24 sm:py-32">
       <div className="grid-bg absolute inset-0 opacity-30" aria-hidden />
 
       <div className="relative mx-auto max-w-6xl px-6">
