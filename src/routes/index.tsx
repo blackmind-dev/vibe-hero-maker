@@ -32,6 +32,7 @@ function Index() {
       <Hero />
       <FeaturedProjects />
       <Services />
+      <Process />
     </main>
   );
 }
