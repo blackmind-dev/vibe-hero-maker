@@ -180,3 +180,42 @@
     linear-gradient(to bottom, oklch(1 0 0 / 0.035) 1px, transparent 1px);
   background-size: 56px 56px;
 }
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  [id] {
+    scroll-margin-top: 5rem;
+  }
+}
+
+@utility section-blend {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset-inline: 0;
+    top: 0;
+    height: 12rem;
+    pointer-events: none;
+    background: linear-gradient(
+      to bottom,
+      oklch(0.24 0.014 190 / 0.55),
+      oklch(0.82 0.13 176 / 0.04) 45%,
+      transparent
+    );
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset-inline: 0;
+    bottom: 0;
+    height: 12rem;
+    pointer-events: none;
+    background: linear-gradient(to top, oklch(0.19 0.012 190 / 0.5), transparent);
+  }
+}
