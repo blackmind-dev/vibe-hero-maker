@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { CTA } from "@/components/CTA";
 import { FeaturedProjects } from "@/components/FeaturedProjects";
 import { Hero } from "@/components/Hero";
 import { Process } from "@/components/Process";
@@ -33,6 +34,7 @@ function Index() {
       <FeaturedProjects />
       <Services />
       <Process />
+      <CTA />
     </main>
   );
 }
